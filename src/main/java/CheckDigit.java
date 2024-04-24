@@ -2,18 +2,13 @@ public class CheckDigit
 {   
    public static int getCheck(int num) 
    {  
-      ArrayList<Integer> digitList = new ArrayList<Integer>();
-      while(num > 0){
-        digitList.add(0, num % 10);
-        num = num / 10;
-      }
-      int multi = 7;
       int total = 0;
-      for(int i = 0; i < digitList.size(); i++){
-        total = total + (digitList.get(i) * multi);
-        multi--;
+      int mult = 7;
+      for(int i = 0; i < getNumberOfDigits(num) + 1; i++){
+         total = total + (getDigit(num, i + 1) * mult);
+         mult--;
       }
-     return total;
+      return total;
    }
  
   /** Returns true if numWithCheckDigit is valid, or false    
