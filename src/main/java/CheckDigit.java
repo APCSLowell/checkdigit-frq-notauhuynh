@@ -8,7 +8,7 @@ public class CheckDigit
          total = total + (getDigit(num, i + 1) * mult);
          mult--;
       }
-      return total;
+      return total % 10;
    }
  
   /** Returns true if numWithCheckDigit is valid, or false    
