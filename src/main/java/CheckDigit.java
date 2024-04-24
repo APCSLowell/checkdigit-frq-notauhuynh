@@ -2,15 +2,15 @@ public class CheckDigit
 {   
    public static int getCheck(int num) 
    {  
-      ArrayList <Integer> nums = new ArrayList<Integer>();
+      ArrayList<Integer> digitList = new ArrayList<Integer>();
       while(num > 0){
-        nums.add(0, num % 10);
+        digitList.add(0, num % 10);
         num = num / 10;
       }
       int multi = 7;
       int total = 0;
-      for(int i = 0; i < nums.size(); i++){
-        total = total + (nums.get(i) * multi);
+      for(int i = 0; i < digitList.size(); i++){
+        total = total + (digitList.get(i) * multi);
         multi--;
       }
      return total;
