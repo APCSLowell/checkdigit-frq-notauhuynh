@@ -3,10 +3,9 @@ public class CheckDigit
    public static int getCheck(int num) 
    {  
       int total = 0;
-      int mult = 7;
-      for(int i = 0; i < getNumberOfDigits(num) + 1; i++){
-         total = total + (getDigit(num, i + 1) * mult);
-         mult--;
+     
+      for(int i = 1; i <= getNumberOfDigits(num); i++){
+         total = total + (getDigit(num, i) * (8 - i));
       }
       return total % 10;
    }
