@@ -1,13 +1,8 @@
 public class CheckDigit 
 {   
-  /** Returns the check digit for num, as described in part (a).  
-   *  Precondition: The number of digits in num is between one and    
-   *  six, inclusive.  
-   *          num >= 0  
-   */  
    public static int getCheck(int num) 
    {  
-      ArrayList<Integer>nums = new ArrayList<Integer>();
+      ArrayList <Integer> nums = new ArrayList <Integer>();
       while(num > 0){
         nums.add(0, num % 10);
         num = num / 10;
