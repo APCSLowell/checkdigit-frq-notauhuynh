@@ -2,7 +2,7 @@ public class CheckDigit
 {   
    public static int getCheck(int num) 
    {  
-      ArrayList <Integer> nums = new ArrayList <Integer>();
+      ArrayList <Integer> nums = new ArrayList<Integer>();
       while(num > 0){
         nums.add(0, num % 10);
         num = num / 10;
